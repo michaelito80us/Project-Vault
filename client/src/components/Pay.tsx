@@ -46,9 +46,8 @@ function Pay() {
       const response = await axios.post(`${serverURL}/create-payment-intent`, {
         amount: amountInCents,
         id,
-        projectId
+        projectId,
       });
-      console.log('RESPONSE! -> ', response)
       setShowMessage('success')
       setTimeout(() => window.history.back(), 2000);
     } catch (error) {

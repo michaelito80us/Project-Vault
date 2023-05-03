@@ -166,7 +166,6 @@ describe('Following projects', () => {
     const response = await request(app)
       .get(`/projects/following/${user._id}`)
       .send(user);
-    console.log('🙋🏻', response.body);
     expect(response.status).toBe(201);
   });
 });
@@ -191,7 +190,6 @@ describe('Personal projects', () => {
     const response = await request(app)
       .get(`/projects/personal/${user._id}`)
       .send(user);
-    console.log('🙋🏻', response.body);
     expect(response.status).toBe(201);
   });
 });
